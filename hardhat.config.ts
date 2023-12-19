@@ -7,6 +7,15 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
+        version: "0.8.7",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 1000,
+          },
+        },
+      },
+      {
         version: "0.5.16",
         settings: {
           optimizer: {
@@ -33,11 +42,13 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY || ""],
     },
   },
+
   dependencyCompiler: {
     paths: [
       "@uniswap/v2-core/contracts/UniswapV2Pair.sol",
       "@uniswap/v2-core/contracts/UniswapV2Factory.sol",
-      "@uniswap/v2-periphery/contracts/UniswapV2Router02.sol",
+      // "@uniswap/v2-periphery/contracts/UniswapV2Router02.sol",
+      "@zetachain/protocol-contracts/contracts/zevm/ZRC20.sol",
     ],
   },
 };

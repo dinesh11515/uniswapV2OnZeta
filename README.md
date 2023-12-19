@@ -1,13 +1,37 @@
-# Sample Hardhat Project
+# Uniswap V2 On ZetaChain
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project contains modified contracts of Uniswap V2 For ZetaChain.
 
-Try running some of the following tasks:
+#### UniswapV2Router02 Address : 0x288aC6eec226fDAF71D4Ba21cA3102f9fB8C2dc7
+
+#### UniswapV2Factory Address : 0x9645465a14F726e2e012Ba21E383bbe4f070039D
+
+#### BTC-ETH pairAddress : 0x923337C66DC8DDE8523c3AE3FdDB917eFfd094E1
+
+### Instructions for deploying and testing
+
+First create a new .env file and add your private key by following env example
+
+then install node modules by running this command
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+npm i
+```
+
+For deploying the contract
+
+```shell
+npm run deploy
+```
+
+For testing the contracts
+
+```shell
+yarn test
+```
+
+Combined version of deployment and testing
+
+```shell
+yarn detest
 ```
